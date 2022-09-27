@@ -10,7 +10,7 @@ export default function Testimonials() {
 
     
 const feedBackItems = document.querySelectorAll('.feedback-item');
-const feedBackBtns = document.querySelectorAll('.feedback-btn');
+// const feedBackBtns = document.querySelectorAll('.feedback-btn');
 const feedBackDisplay = document.querySelector('#feedback-display');
 
 
@@ -30,16 +30,21 @@ function changeFeedback(id){
 const handleContent = () => {
     
     
-const feedBackItems = document.querySelectorAll('.feedback-item');
+// const feedBackItems = document.querySelectorAll('.feedback-item');
 const feedBackBtns = document.querySelectorAll('.feedback-btn');
-const feedBackDisplay = document.querySelector('#feedback-display');
+// const feedBackDisplay = document.querySelector('#feedback-display');
 
 
 // let activeId = 1;
 changeFeedback(activeId);
 function changeFeedback(id){
+      
+const feedBackItems = document.querySelectorAll('.feedback-item');
+// const feedBackBtns = document.querySelectorAll('.feedback-btn');
+const feedBackDisplay = document.querySelector('#feedback-display');
     feedBackItems.forEach((item) => {
-        if(id == item.dataset.id){
+        let tmp = Number(item.dataset.id);
+        if(id === tmp){
             [feedBackDisplay.dataset.id, item.dataset.id] = [item.dataset.id, feedBackDisplay.dataset.id];
 
             // swap inner content
@@ -61,9 +66,9 @@ function changeFeedback(id){
 
 function feedBackBtnReset(){
        
-const feedBackItems = document.querySelectorAll('.feedback-item');
+// const feedBackItems = document.querySelectorAll('.feedback-item');
 const feedBackBtns = document.querySelectorAll('.feedback-btn');
-const feedBackDisplay = document.querySelector('#feedback-display');
+// const feedBackDisplay = document.querySelector('#feedback-display');
     feedBackBtns.forEach((btn) =>{
         btn.classList.remove('feedback-active-btn');
     });

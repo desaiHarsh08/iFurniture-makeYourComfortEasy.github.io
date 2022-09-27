@@ -13,7 +13,7 @@ export default function Home() {
             <div className="flex justify-center">
 
                 <button className="w-40 my-4 px-3 py-2 rounded-md bg-blue-700 text-white font-bold hover:bg-blue-900 focus-within:ring-4 focus:ring-blue-400 text-xl"><a
-                    href="">Get Started</a></button>
+                    href="/">Get Started</a></button>
                 </div>
         </div>
         <div className="home-img border after:content-[''] h-[215px] w-[300px] sm:w-[490px] bg-yellow-400 relative lg:top-20 right-4 rounded-[50%] -z-[1] mx-auto ">
